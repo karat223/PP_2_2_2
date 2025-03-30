@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            width: 60px;
+            height: 60px;
+            border: solid 1px silver;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Cars Table</h1>
+<table>
+    <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+    <tr th:each="car : ${cars}">
+        <td th:utext="${car.getBrand()}"></td>
+        <td th:utext="${car.getModel()}"></td>
+        <td th:utext="${car.getAge()}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
